@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import dotenv from "dotenv";
-import express from "express";
+import express, { response } from "express";
 import { Conn }  from "./data-source";
 import  routes from "./routes/routes";
 dotenv.config();
@@ -12,8 +12,8 @@ Conn.initialize().then(() =>{
 	app.use(routes)
 
 
-	return app.listen(process.env.PORT)
-
+	return app.listen(process.env.PORT,() => {(console.log("Servidor OK"))});
+ 
 
 })
 
