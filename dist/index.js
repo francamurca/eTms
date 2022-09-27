@@ -13,5 +13,5 @@ data_source_1.Conn.initialize().then(() => {
     const app = (0, express_1.default)();
     app.use(express_1.default.json());
     app.use(routes_1.default);
-    return app.listen(process.env.PORT);
+    return app.listen(process.env.PORT, () => { (console.log("Servidor OK")); });
 });

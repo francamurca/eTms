@@ -31,7 +31,7 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)({ length: 50, nullable: true }),
     __metadata("design:type", String)
-], Endereco.prototype, "complenento", void 0);
+], Endereco.prototype, "complemento", void 0);
 __decorate([
     (0, typeorm_1.Column)({ length: 60, nullable: true }),
     __metadata("design:type", String)

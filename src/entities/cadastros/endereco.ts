@@ -8,8 +8,6 @@ export class Endereco{
   @PrimaryGeneratedColumn()
 	id: BigInt
 
-	// @Column("bigint")
-	// pessoa_id: number
 	@Column({length: 100, nullable: true})
 	logradouro: string
 
