@@ -17,7 +17,7 @@ export class Endereco{
 	numero: string
 
 	@Column({length: 50, nullable: true})
-  complenento: string
+  complemento: string
 
 	@Column({length: 60, nullable: true})
   bairro: string
