@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToMany, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Cidade } from "./cidade";
 import { ProprietarioVeiculo } from "./proprietario_veiculos";
 import { TipoCarroceria } from "./tipo_carroceria";

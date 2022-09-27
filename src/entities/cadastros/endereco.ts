@@ -1,6 +1,5 @@
 import { Column, Entity, JoinColumn, JoinTable, ManyToOne, OneToOne, PrimaryGeneratedColumn } from "typeorm";
 import { Cidade } from "./cidade";
-import { Empresa } from "./empresa";
 import {Pessoa} from "./pessoa"
 import { Tipo_Endereco } from "./tipo_endereco";
 

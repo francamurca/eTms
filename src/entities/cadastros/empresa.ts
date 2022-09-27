@@ -1,5 +1,5 @@
-import { Column, Entity, Index, OneToMany, PrimaryGeneratedColumn } from "typeorm";
-import { Endereco } from "./endereco";
+import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
+
 
 @Entity("empresa")
 @Index(["cnpj", "unidade"], {unique: true})

@@ -1,7 +1,6 @@
 import {  Column, Entity, JoinColumn, JoinTable, ManyToMany,  ManyToOne,  PrimaryGeneratedColumn, Timestamp } from "typeorm";
 import { Pessoa } from "./pessoa";
-
-import * as type from "../../common/data-types"
+import * as type from "../../common/data-types";
 
 
 @Entity("telefone")

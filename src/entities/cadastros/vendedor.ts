@@ -1,4 +1,4 @@
-import { Column, CreateDateColumn, Double, Entity, JoinColumn, OneToMany, OneToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { Cliente } from "./cliente";
 
 @Entity("vendedor")
