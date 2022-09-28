@@ -1,4 +1,4 @@
-import { Column, Entity, Index, InsertValuesMissingError, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, Index, PrimaryGeneratedColumn } from "typeorm";
 
 
 @Entity("empresa")
@@ -12,14 +12,20 @@ export class Empresa{
 	@Column({length:14})
 	cnpj: string
 
+	@Column({length: 20, nullable: true})
+	insc_estadual: string;
+
+	@Column({length: 20, nullable: true})
+	insc_municipal: string;
+
+	@Column({type: "bool", default: false})
+  regime_simples: boolean
+
 	@Column({length: 3})
 	unidade: string
 
 	@Column({type: "bool", default: true})
   ativo: boolean
-
-	@Column({length:20, nullable: true})
-  insc_estadual: string
 
   @Column({length: 100})
 	logradouro: string
@@ -65,15 +71,6 @@ export class Empresa{
 
 	@Column({length: 14, nullable: true})
   telefone2: string
-
-	@Column({length: 3, nullable: true})
-  serie_cte: string
-
-	@Column({length: 3, nullable: true})
-  serie_nfe: string
-
-	@Column({length: 3, nullable: true})
-  serie_mdfe: string
 
   @Column({length: 100, nullable: true})	
   hash: string;
