@@ -22,6 +22,18 @@ __decorate([
     __metadata("design:type", String)
 ], Empresa.prototype, "cnpj", void 0);
 __decorate([
+    (0, typeorm_1.Column)({ length: 20, nullable: true }),
+    __metadata("design:type", String)
+], Empresa.prototype, "insc_estadual", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ length: 20, nullable: true }),
+    __metadata("design:type", String)
+], Empresa.prototype, "insc_municipal", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: "bool", default: false }),
+    __metadata("design:type", Boolean)
+], Empresa.prototype, "regime_simples", void 0);
+__decorate([
     (0, typeorm_1.Column)({ length: 3 }),
     __metadata("design:type", String)
 ], Empresa.prototype, "unidade", void 0);
@@ -29,10 +41,6 @@ __decorate([
     (0, typeorm_1.Column)({ type: "bool", default: true }),
     __metadata("design:type", Boolean)
 ], Empresa.prototype, "ativo", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ length: 20, nullable: true }),
-    __metadata("design:type", String)
-], Empresa.prototype, "insc_estadual", void 0);
 __decorate([
     (0, typeorm_1.Column)({ length: 100 }),
     __metadata("design:type", String)
@@ -93,18 +101,6 @@ __decorate([
     (0, typeorm_1.Column)({ length: 14, nullable: true }),
     __metadata("design:type", String)
 ], Empresa.prototype, "telefone2", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ length: 3, nullable: true }),
-    __metadata("design:type", String)
-], Empresa.prototype, "serie_cte", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ length: 3, nullable: true }),
-    __metadata("design:type", String)
-], Empresa.prototype, "serie_nfe", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ length: 3, nullable: true }),
-    __metadata("design:type", String)
-], Empresa.prototype, "serie_mdfe", void 0);
 __decorate([
     (0, typeorm_1.Column)({ length: 100, nullable: true }),
     __metadata("design:type", String)

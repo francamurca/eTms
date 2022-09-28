@@ -26,6 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const pessoaController = __importStar(require("../controllers/pessoaController"));
 const typesController = __importStar(require("../controllers/typesController"));
+const pessoaControler = __importStar(require("../controllers/empresaController"));
 const route = (0, express_1.Router)();
 //Pessoa
 route.get('/pessoa', new pessoaController.PessoaController().findAll);
@@ -36,4 +37,11 @@ route.put("/pessoa/update/:id", new pessoaController.PessoaController().update);
 //fim Pessoa
 //DataTypes
 route.get("/datatypes/:datatype", new typesController.DataTypes().dataTypes);
+// fim DataTypes
+//Empresa
+route.get('/empresa', new pessoaControler.EmpresaController().findAll);
+route.get('/empresa/buscaPorUnidade/:unidade', new pessoaControler.EmpresaController().findOne);
+route.post("/empresa/insert", new pessoaControler.EmpresaController().create);
+route.put("/empresa/update/:id", new pessoaControler.EmpresaController().update);
+// fim Empresa
 exports.default = route;
