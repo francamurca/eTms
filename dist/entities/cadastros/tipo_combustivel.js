@@ -21,10 +21,10 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)({ length: 30, unique: true }),
     __metadata("design:type", String)
-], TipoCombustivel.prototype, "tipo_combustivel", void 0);
+], TipoCombustivel.prototype, "combustivel", void 0);
 __decorate([
     (0, typeorm_1.OneToMany)(() => veiculo_1.Veiculo, veiculos => veiculos.tipoCombustivel),
-    __metadata("design:type", veiculo_1.Veiculo)
+    __metadata("design:type", Array)
 ], TipoCombustivel.prototype, "veiculos", void 0);
 TipoCombustivel = __decorate([
     (0, typeorm_1.Entity)("tipo_combustivel")

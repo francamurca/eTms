@@ -11,7 +11,7 @@ export class PessoaController{
 	async create(req: Request, res: Response) {
     try {
 			const novo = req.body; 
-			
+
 		  const pessoa = useRepo.create(novo);
 			await useRepo.save(pessoa);
 			res.status(201).json(pessoa);

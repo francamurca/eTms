@@ -1,4 +1,4 @@
-import {  Column, Entity, JoinColumn, JoinTable, ManyToMany,  ManyToOne,  PrimaryGeneratedColumn, Timestamp } from "typeorm";
+import {  Column, Entity, JoinColumn,  ManyToOne,  PrimaryGeneratedColumn } from "typeorm";
 import { Pessoa } from "./pessoa";
 import * as type from "../../common/data-types";
 
