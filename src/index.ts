@@ -14,7 +14,7 @@ dotenv.config();
 
 Conn.initialize().then(() =>{
 	const app = express();
-	
+
   app.use(bp.json())
 	app.use(bp.urlencoded({ extended: true }));
 	app.use(pessoaRoutes)
@@ -23,7 +23,6 @@ Conn.initialize().then(() =>{
 	app.use(bancoRoutes)
 	app.use(tipoCombustivel)
 	app.use(veiculo)
-
 
 	return app.listen(process.env.PORT,() => {(console.log("Servidor OK"))});
  
