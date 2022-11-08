@@ -1,6 +1,7 @@
 import "reflect-metadata";
 import dotenv from "dotenv";
 import express from "express";
+import bp from "body-parser"
 import { Conn }  from "./data-source";
 import  pessoaRoutes from "./routes/pessoa-routes";
 import empresaRoutes from "./routes/empresa-routes";
@@ -12,16 +13,16 @@ import veiculo from "./routes/veiculo-routes";
 dotenv.config();
 
 Conn.initialize().then(() =>{
-	const app = express()
+	const app = express();
 
-	app.use(express.urlencoded({ extended: false }));
+  app.use(bp.json())
+	app.use(bp.urlencoded({ extended: true }));
 	app.use(pessoaRoutes)
 	app.use(empresaRoutes)
 	app.use(typeRoutes)
 	app.use(bancoRoutes)
 	app.use(tipoCombustivel)
 	app.use(veiculo)
-
 
 	return app.listen(process.env.PORT,() => {(console.log("Servidor OK"))});
  
